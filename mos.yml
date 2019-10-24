@@ -1,0 +1,24 @@
+author: Press Every Key UG 
+type: lib
+description: library for generic i2c eeprom manipulation.
+version: 1.0
+name: i2c_eeprom
+
+sources:
+  - src
+includes:
+  - include
+
+config_schema:
+  - ["i2ceeprom", "o", {title: "I2C EEPROM config"}]
+  - ["i2ceeprom.addr", "i", {title: "i2c address of eeprom"}]
+  - ["i2ceeprom.size", "i", {title: "size of eeprom"}]
+  - ["i2ceeprom.pgsize", "i", {title: "page size of eeprom"}]
+
+libs:
+  - origin: https://github.com/mongoose-os-libs/i2c
+
+tags:
+  - c
+
+manifest_version: 2017-09-29
